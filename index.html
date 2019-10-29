@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>checkBox</title>
+  <link rel="stylesheet" type="text/css" href="check.css">
+</head>
+<body>
+  <div id="todo">
+    <div id="header">
+      <img src="images/logo.png">
+    </div>
+    <div id="main">
+      
+    </div>
+    <div id="bottom">
+      <div class="paper-bottom">
+        <input id="task-form" type="text" name="" placeholder="  type your task...">
+      </div>
+    </div>
+    <div id="b-bottom">
+
+      
+    </div>
+
+  </div>
+
+
+<script>
+  
+  var checkBoxCount = 0;
+  taskList = document.querySelector('#main');
+  const form = document.querySelector('#task-form');
+
+  form.addEventListener('keypress', addTask);
+
+  function addTask(e) {
+    if (e.keyCode == 13) {
+      let html = "";
+      html = `<div class="paper">
+        <input type="checkbox"  class="chk" id="chk">
+          <p class="tasks">${form.value}</p>
+          <div id="doneLine" class="doneLine"></div>
+          <a href="#" class="remove">remove</a>
+      </div>`;
+
+      checkBoxCount += 1;
+      taskList.insertAdjacentHTML('beforeend', html);
+      form.value = "";
+
+      test();
+
+    }
+  }
+
+function test() {
+  tasks = document.querySelector('.paper')
+
+  const checkboxs = document.querySelectorAll('.chk');
+  checkboxs.forEach(checkbox => {
+    checkbox.addEventListener('change', checked)
+  });
+
+  const removes = document.querySelectorAll('.remove');
+  removes.forEach(remove => {
+    remove.addEventListener('click', removeTask);
+  });
+
+}
+
+function checked() {
+
+    let checkedTask = this.parentNode.querySelector('.tasks');
+    
+    if (checkedTask.classList.contains('done')) {
+      checkedTask.classList.remove('done');
+    }else{
+      checkedTask.classList.add('done');
+    }
+
+
+    let checkedLine = this.parentNode.querySelector('.doneLine');
+    if (checkedLine.classList.contains('visible')) {
+      checkedLine.classList.remove('visible');
+    }else{
+      checkedLine.classList.add('visible');
+    }
+  }  
+
+
+function removeTask() {
+  console.log(this.parentNode);
+  let removedPaper = this.parentNode;
+
+  removedPaper.parentNode.removeChild(removedPaper);
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

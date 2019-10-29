@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
+
+
+body {
+  background-color: #edf0ee;
+  font-family: 'Arimo', sans-serif;
+  color: #234756;
+  font-size: 12px;
+}
+
+#header {
+  background-image: url('images/bg-header.jpg');
+  height: 41px;
+  width: 225px;
+  margin: 27px auto 0px auto;
+  border-radius: 3px;
+  border: 1px solid #3874a3;
+  text-align: center;
+
+}
+
+#header img {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+#main {
+  margin: 0px auto;
+  width: 223px;
+  border-left: 1px solid #aeb2b4;
+  border-right: 1px solid #aeb2b4;
+}
+
+.paper {
+  background-image: url("images/paper.jpg");
+  width: 100%;
+  height: 39px;
+  
+}
+
+/*.paper input[type="checkbox"] {
+  height: 23px !important;
+  width: 23px !important;
+  
+}*/
+
+.tasks {
+  display: inline-block;
+  margin-left: 20px;
+  width: 76%;
+  text-align: center;
+}
+
+#chk {
+  width: 23px;
+  height: 23px;
+}
+
+
+#bottom {
+  width: 223px;
+  height: 35px;
+  margin: 0px auto;
+  border-left: 1px solid #aeb2b4;
+  border-right: 1px solid #aeb2b4;
+  border-bottom: 1px solid #aeb2b4;
+  z-index: 1;
+  position: relative;
+  top: -1px;
+}
+
+.paper-bottom {
+  background-image: url("images/paper-bottom-2.jpg");
+  width: 223px;
+  height: 35px;
+}
+
+#task-form {
+  width: 156px;
+  height: 28px;
+  margin: 1px 6px 6px 59px;
+  border: 1px solid #e9ecec;
+}
+
+
+#b-bottom {
+  width: 223px;
+  height: 15px;
+  margin: 0px auto;
+  background-image: url("images/b-bottom.png");
+}
+
+
+.done {
+  opacity: 0.3;
+  margin-top: 1px solid #e2dede;
+
+}
+
+.doneLine {
+    height: 1px;
+    display: inline-block;
+    margin-left: 26px;
+    width: 70%;
+    text-align: center;
+    /*border-top: 1px solid #e2dede;*/
+    position: relative;
+    top: -28px;
+    left: 32px;
+}
+
+.visible {
+  border-top: 1px solid #e2dede;
+}
+
+a {
+      position: relative;
+      left: 180px;
+      top: -30px;
+}
+
+
+
+
